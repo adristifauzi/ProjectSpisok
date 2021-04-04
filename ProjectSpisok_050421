@@ -9,7 +9,7 @@ for i in range(lines):
     column = i
     for j in range(i+1):
         row = j
-        formula = int((math.factorial(column)) / ((math.factorial(row)) * (math.factorial(column - row))))
+        formula = int((math.factorial(column)) / ((math.factorial(row)) * (math.factorial(column - row)))) #formula for every number
         list1.append(formula)
     list_of_list.append((list1))
     list1=[]
