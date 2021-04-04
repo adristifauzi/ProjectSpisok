@@ -1,3 +1,4 @@
+#Pascal Triangle Code
 import math
 #columns = up to down
 #rows = left to right
