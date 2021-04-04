@@ -1,0 +1,33 @@
+import math
+#columns = up to down
+#rows = left to right
+lines = int(input('введите количество строк: '))
+list_of_list = []
+list1 = []
+for i in range(lines):
+    column = i
+    for j in range(i+1):
+        row = j
+        formula = int((math.factorial(column)) / ((math.factorial(row)) * (math.factorial(column - row))))
+        list1.append(formula)
+    list_of_list.append((list1))
+    list1=[]
+print(list_of_list)
+sentence = ''
+for i in list_of_list[-1]: #to find the max length of base
+    sentence = sentence + str(i) + ' '
+#print(sentence)
+maxl = len(sentence)-1 #the max length
+#print(maxl)
+z = -1
+for i in list_of_list: #for every column
+    z = z + 1
+    sentence_i = ''
+    for m in list_of_list[z]: #to put all the items inside array into a string
+        sentence_i = sentence_i + str(m) + ' '
+    length = len(sentence_i)-1 #to know the length of i row
+    #print(length)
+    k = int((maxl - length)/2) #center formula --> know how many gap we have
+    for j in range (k):
+        print(" ", end="") #fill the gap with space(s)
+    print(*i)
