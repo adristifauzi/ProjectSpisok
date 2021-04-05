@@ -13,7 +13,7 @@ for i in range(lines):
         list1.append(formula)
     list_of_list.append((list1))
     list1=[]
-print(list_of_list)
+#print(list_of_list)
 sentence = ''
 for i in list_of_list[-1]: #to find the max length of base
     sentence = sentence + str(i) + ' '
